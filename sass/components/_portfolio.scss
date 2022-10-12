@@ -1,0 +1,112 @@
+.portfolio {
+    @extend %section;
+    &__title {
+        @extend %visibilyty-hidden;
+    }
+}
+
+.btn-list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    &__item:not(last-child) {
+        margin-right: 8px;
+    }
+}
+
+.portfolio-btn {
+    background-color: $background-color-team;
+    color: $title-text-color;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    padding: 6px 22px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+        background-color: $accent-color;
+        color: $white-color;
+        padding: 6px 25px;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.img-list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+        background-color: $white-color;
+        width: 370px;
+    }
+    &__item:not(:nth-child(3n + 3)) {
+        margin-right: 30px;
+    }
+    &__item:nth-child(-n + 6) {
+        margin-bottom: 30px;
+    }
+}
+
+.img-link {
+    @extend %link;
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    &__thumb {
+        position: relative;
+        overflow: hidden;
+    }
+    &__hidden {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 63px 24px;
+        width: 370px;
+        height: 294px;
+        background-color: rgba(33, 150, 243, 0.9);
+        transform: translateY(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:hover .img-link__hidden, &:focus .img-link__hidden {
+        transform: translateY(0);
+    }
+    &__title {
+        color: $title-text-color;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        margin-bottom: 4px;
+    }
+    &__text {
+        color: $primary-text-color;
+        font-size: 16px;
+        line-height: 1.9;
+        letter-spacing: 0.03em;
+    }
+}
+
+.hidden-container__text {
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    color: $white-color;
+}
+
+.img-link__description {
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: none;
+}

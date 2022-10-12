@@ -1,0 +1,46 @@
+.features {
+    @extend %section;
+    &__title {
+        @extend %visibilyty-hidden;
+    }
+}
+
+.features-list {
+    @extend %list;
+    display: flex;
+
+    &__item {
+        width: 270px;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 270px;
+        height: 120px;
+        background-color: $background-color-team;
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        color: $title-text-color;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.1;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+    }
+}
