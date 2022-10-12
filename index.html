@@ -20,9 +20,17 @@
   <body>
     <header class="header">
       <div class="container container--centered">
-        <a href="/" lang="en" class="logo header__logo"
+        <a href="#" lang="en" class="logo header__logo"
           ><span class="logo__text">Web</span>Studio</a
         >
+        <button type="button" class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+          <svg width="40" height="40" menu-btn__icon>
+            <use href="./img/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container is-open js-menu-container" id="mobile-menu">
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -40,22 +48,37 @@
         </nav>
         <ul class="contacts">
           <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./img/icons.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a href="tel:+380961111111" class="contacts__link">
+            <a href="tel:+380961111111" class="contacts__link contacts__link--tel">
               <svg class="contacts__icon" width="10" height="16">
                 <use href="./img/icons.svg#icon-tel"></use>
               </svg>
               +38 096 111 11 11
             </a>
           </li>
+          <li class="contacts__item">
+            <a href="mailto:info@devstudio.com" class="contacts__link contacts__link--mail">
+              <svg class="contacts__icon" width="16" height="12">
+                <use href="./img/icons.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
         </ul>
+        <ul class="mobile-soc">
+          <li class="mobile-soc__item">
+            <a href="#" class="mobile-soc__link">Instagram</a>
+          </li>
+          <li class="mobile-soc__item">
+            <a href="#" class="mobile-soc__link">Twitter</a>
+          </li>
+          <li class="mobile-soc__item">
+            <a href="#" class="mobile-soc__link">Facebook</a>
+          </li>
+          <li class="mobile-soc__item">
+            <a href="#" class="mobile-soc__link">LinkedIn</a>
+          </li>
+        </ul>
+        </div>
       </div>
     </header>
 
@@ -394,7 +417,7 @@
     <footer class="footer">
       <div class="container container--flex">
         <div>
-          <a href="/" lang="en" class="logo logo--white"
+          <a href="#" lang="en" class="logo logo--white"
             ><span class="logo__text">Web</span>Studio</a
           >
           <address class="address">
@@ -555,5 +578,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -5,84 +5,212 @@
 .container--centered {
     display: flex;
     align-items: center;
+    
+    @media screen and (max-width:767px) {
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+    
 }
 
 .navigation {
-    display: flex; 
     &__list {
         @extend %list;
-        display: flex;
-        align-items: center;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 302px;
+        }
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
     }
     &__item:not(:last-child) {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 32px;
+        }
+        @media screen and (min-width: 768px) {
         margin-right: 50px;
+        }
     }
     &__link {
         @extend %link;
         color: $title-text-color;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 1.1;
+        font-size: 40px;
+        line-height: 1.2;
         letter-spacing: 0.02em;
-        padding-top: 32px;
-        padding-bottom: 32px;
-        display: flex;
-        align-items: center;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        &:hover, &:focus {
-            color: $accent-color;
+       
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+            line-height: 1.1;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            &:hover, &:focus {
+                color: $accent-color;
+            }
         }
     }
 }
 
 .navigation__link--current {
-    position: relative;
-    display: block;
     color: $accent-color;
-
-    &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -1px;
+    @media screen and (min-width: 768px) {
+        position: relative;
         display: block;
-        width: 100%;
-        height: 4px;
-        background-color: $accent-color;
-        border-radius: 2px;
+        
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: $accent-color;
+            border-radius: 2px;
+        }
     }
+    
 }
 
 .contacts {
-    @extend .navigation__list;
-    margin-left: auto;
-
+    @extend %list;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: auto;
+    }
+    @media screen and (min-width: 1200px) {
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-left: auto;
+    }
+   
     &__item:not(:last-child) {
-        margin-right: 50px;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 32px;
+        } 
+    }
+
+    &__item:not(:first-child) {
+        @media screen and (min-width: 1200px) {
+            margin-right: 50px;
+        }
+        @media screen and (min-width: 768px) and (max-width:1199px) {
+            margin-bottom: 10px;
+        }
     }
 
     &__link {
-        @extend .navigation__link;
-
-        &:hover,
-        &:focus {
-            color: $accent-color;
+        @extend %link; 
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            line-height: 1.2;
+            &--tel {
+                color: $accent-color;
+                font-size: 34px;
+            }
+            &--mail {
+                color: $primary-text-color;
+                font-size: 24px;
+            }
+        @media screen and (min-width: 768px) {
+            font-size: 12px;
+            line-height: 1.1px;
+            color: $primary-text-color;
+            display: flex;
+            align-items: center;
+            
+            &:hover, &:focus {
+                color: $accent-color;
+            }
+            
+            &:hover .contacts__icon, &:focus .contacts__icon {
+                fill: $accent-color;
+            }
         }
-
-        &:hover .contacts__icon,
-        &:focus .contacts__icon {
-            fill: $accent-color;
-        }
+       
     }
 
     &__icon {
-        margin-right: 10px;
-        fill: $primary-text-color;
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-        &:hover,
-        &:focus {
-            fill: $accent-color;
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: block;
+            margin-right: 10px;
+            fill: $primary-text-color;
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            
+            &:hover, &:focus {
+                fill: $accent-color;
+            }
+            }
         }
+       
+}
+
+.mobile-soc {
+    @media screen and (min-width: 768px) {
+        display: none;
     }
+    @extend %list;
+    display: flex;
+    align-items: center;
+    margin-top: 64px;
+
+    &__item {
+        height: 22px;
+    }
+
+    &__item:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        padding-right: 10px;
+    }
+
+    &__item:not(:first-child) {
+        padding-left: 10px;
+    }
+
+    &__link {
+        @extend %link;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: $accent-color;
+    }
+}
+
+.menu-container {
+    display: none;
+
+.menu-container.is-open {
+    display: block;
+    max-width: 480px;
+    max-height: 796px;
+    padding: 48px 40px;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.menu-toggle {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+        min-height: 40px;
+        min-width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        outline: none;
 }
