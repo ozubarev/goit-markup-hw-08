@@ -281,24 +281,20 @@ body {
 }
 
 .menu-container {
-  display: none;
-}
-.menu-container .menu-container.is-open {
-  display: block;
-  max-width: 480px;
-  max-height: 796px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   padding: 48px 40px;
+  background-color: #ffffff;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
-@media screen and (min-width: 768px) {
-  .menu-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-  }
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .menu-toggle {
