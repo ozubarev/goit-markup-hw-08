@@ -7,13 +7,31 @@
 
 .features-list {
     @extend %list;
-    display: flex;
-
+    
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }    
+        // @media screen and (min-width: 1200px) {
+        //     flex-wrap: nowrap;
+        // }
     &__item {
-        width: 270px;
+        @media screen and (min-width: 768px) {
+            margin: 15px;
+            width: calc((100% - 4 * 15px) / 2);
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
+        
+       
 
         &:not(:last-child) {
-            margin-right: 30px;
+            @media screen and (max-width:1199px) {
+                margin-bottom: 30px;
+            }
         }
     }
 
@@ -21,7 +39,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 270px;
         height: 120px;
         background-color: $background-color-team;
         border-radius: 4px;
