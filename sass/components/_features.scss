@@ -9,13 +9,11 @@
     @extend %list;
     
     @media screen and (min-width:768px) {
+        margin: -15px;
         display: flex;
         flex-wrap: wrap;
-        margin: -15px;
     }    
-        // @media screen and (min-width: 1200px) {
-        //     flex-wrap: nowrap;
-        // }
+        
     &__item {
         @media screen and (min-width: 768px) {
             margin: 15px;
@@ -25,13 +23,11 @@
         @media screen and (min-width: 1200px) {
             width: 270px;
         }
-        
-       
-
         &:not(:last-child) {
-            @media screen and (max-width:1199px) {
+            @media screen and (max-width: 767px) {
                 margin-bottom: 30px;
             }
+            
         }
     }
 
@@ -46,6 +42,7 @@
     }
 
     &__title {
+        text-align: center;
         color: $title-text-color;
         font-weight: 700;
         font-size: 14px;
@@ -53,6 +50,9 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         margin-bottom: 10px;
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
     }
 
     &__text {
