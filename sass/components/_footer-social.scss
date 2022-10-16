@@ -1,4 +1,4 @@
-// .footer-social {
+.footer-social {
 //     margin-left: 70px;
 //     &__label {
 //         font-weight: 700;
@@ -9,17 +9,17 @@
 //         color: $white-color;
 //         margin-bottom: 20px;
 //     }
-// }
+}
 
-// .footer-soc-list {
-//     @extend %list;
-//     display: flex;
-//     justify-content: center;
-//     &__item {
-//         @extend .social-list__item;
-//     }
-//     &__link {
-//         @extend %link;
+.footer-soc-list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    &__item {
+        @extend .social-list__item;
+    }
+    &__link {
+        @extend %link;
 //         display: flex;
 //         justify-content: center;
 //         align-items: center;
@@ -31,8 +31,8 @@
 //         &:hover, &:focus {
 //             background-color: $accent-color;
 //         }
-//     }
-//     &__icon {
-//         fill: $white-color;
-//     }
-// }
+    }
+    &__icon {
+        fill: $white-color;
+    }
+}
