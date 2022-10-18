@@ -201,12 +201,14 @@
 }
 
 .menu-container {
-    z-index: 2;
+    @media screen and (max-width: 767px) {
+        z-index: 2;
+    }
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     padding: 48px 40px;
     background-color: $white-color;
     transform: translateX(100%);
