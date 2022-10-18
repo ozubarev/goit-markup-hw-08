@@ -1,24 +1,24 @@
 .footer {
-    background-color: $background-color-footer;
-    padding-top: 60px;
-    padding-bottom: 60px;
+  background-color: $background-color-footer;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-    @media screen and (max-width: 1199px) {
-        text-align: center;
-    }
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .container--flex {
-    @media screen and (min-width: 1200px) {
-        display: flex;
-        align-items: baseline;  
-    }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer-thumb {
-    @media screen and (min-width: 768px) {
-        display: flex;
-        align-items: baseline; 
-        justify-content: space-around;
-    }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
 }

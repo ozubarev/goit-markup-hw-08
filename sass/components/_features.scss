@@ -1,63 +1,62 @@
 .features {
-    @extend %section;
-    &__title {
-        @extend %visibilyty-hidden;
-    }
+  @extend %section;
+  &__title {
+    @extend %visibilyty-hidden;
+  }
 }
 
 .features-list {
-    @extend %list;
-    
-    @media screen and (min-width:768px) {
-        margin: -15px;
-        display: flex;
-        flex-wrap: wrap;
-    }    
-        
-    &__item {
-        @media screen and (min-width: 768px) {
-            margin: 15px;
-            width: calc((100% - 4 * 15px) / 2);
-        }
+  @extend %list;
 
-        @media screen and (min-width: 1200px) {
-            width: 270px;
-        }
-        &:not(:last-child) {
-            @media screen and (max-width: 767px) {
-                margin-bottom: 30px;
-            }
-            
-        }
+  @media screen and (min-width: 768px) {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) {
+      margin: 15px;
+      width: calc((100% - 4 * 15px) / 2);
     }
 
-    &__img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 120px;
-        background-color: $background-color-team;
-        border-radius: 4px;
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
         margin-bottom: 30px;
+      }
     }
+  }
 
-    &__title {
-        text-align: center;
-        color: $title-text-color;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.1;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        @media screen and (min-width: 768px) {
-            text-align: left;
-        }
-    }
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background-color: $background-color-team;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
 
-    &__text {
-        font-size: 14px;
-        line-height: 1.7;
-        letter-spacing: 0.03em;
+  &__title {
+    text-align: center;
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      text-align: left;
     }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
 }

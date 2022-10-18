@@ -23,9 +23,12 @@
         <a href="#" lang="en" class="logo header__logo"
           ><span class="logo__text">Web</span>Studio</a
         >
-        <button type="button" class="menu-toggle js-open-menu"
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
           aria-expanded="false"
-          aria-controls="mobile-menu">
+          aria-controls="mobile-menu"
+        >
           <svg width="40" height="40" menu-btn__icon>
             <use href="./img/icons.svg#icon-menu"></use>
           </svg>
@@ -33,56 +36,64 @@
         <div class="menu-container js-menu-container" id="mobile-menu">
           <button class="menu-toggle js-close-menu">
             <svg width="40" height="40" class="close-icon">
-            <use href="./img/icons.svg#icon-close-black"></use>
-          </svg>
+              <use href="./img/icons.svg#icon-close-black"></use>
+            </svg>
           </button>
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="./index.html" class="navigation__link"
-                >Студія</a
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="./index.html" class="navigation__link">Студія</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link navigation__link--current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-wraper"></div>
+          <ul class="contacts">
+            <li class="contacts__item">
+              <a
+                href="tel:+380961111111"
+                class="contacts__link contacts__link--tel"
               >
+                <svg class="contacts__icon contacts__icon--tel">
+                  <use href="./img/icons.svg#icon-tel"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link navigation__link--current">Портфоліо</a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">Контакти</a>
+            <li class="contacts__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="contacts__link contacts__link--mail"
+              >
+                <svg class="contacts__icon contacts__icon--mail">
+                  <use href="./img/icons.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a href="tel:+380961111111" class="contacts__link contacts__link--tel">
-              <svg class="contacts__icon contacts__icon--tel">
-                <use href="./img/icons.svg#icon-tel"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link contacts__link--mail">
-              <svg class="contacts__icon contacts__icon--mail">
-                <use href="./img/icons.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-        </ul>
-        <ul class="mobile-soc">
-          <li class="mobile-soc__item">
-            <a href="#" class="mobile-soc__link">Instagram</a>
-          </li>
-          <li class="mobile-soc__item">
-            <a href="#" class="mobile-soc__link">Twitter</a>
-          </li>
-          <li class="mobile-soc__item">
-            <a href="#" class="mobile-soc__link">Facebook</a>
-          </li>
-          <li class="mobile-soc__item">
-            <a href="#" class="mobile-soc__link">LinkedIn</a>
-          </li>
-        </ul>
+          <ul class="mobile-soc">
+            <li class="mobile-soc__item">
+              <a href="#" class="mobile-soc__link">Instagram</a>
+            </li>
+            <li class="mobile-soc__item">
+              <a href="#" class="mobile-soc__link">Twitter</a>
+            </li>
+            <li class="mobile-soc__item">
+              <a href="#" class="mobile-soc__link">Facebook</a>
+            </li>
+            <li class="mobile-soc__item">
+              <a href="#" class="mobile-soc__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
         </div>
       </div>
     </header>
@@ -113,22 +124,34 @@
             <li class="img-list__item">
               <a href="#" class="img-link">
                 <div class="img-link__thumb">
-                <picture>
-                <source srcset="./img/portfolio/port-1-desk-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-1-desk-2x-min.jpeg 2x"
-                  media="(min-width: 1200px)"/>
-                <source srcset="./img/portfolio/port-1-tab-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-1-tab-2x-min.jpeg 2x"
-                  media="(min-width: 768px)"/>
-                <source srcset="./img/portfolio/port-1-mob-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-1-mob-2x-min.jpeg 2x"
-                  media="(max-width: 767px)"/>
-                <img
-                  src="./img/portfolio/port-1-desk-1x-min.jpeg"
-                  alt="відкрита веб-сторінка"
-                  class="img-list__img"
-              />
-              </picture>
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/port-1-desk-1x-min.jpeg 1x,
+                        ./img/portfolio/port-1-desk-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-1-tab-1x-min.jpeg 1x,
+                        ./img/portfolio/port-1-tab-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-1-mob-1x-min.jpeg 1x,
+                        ./img/portfolio/port-1-mob-2x-min.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/portfolio/port-1-desk-1x-min.jpeg"
+                      alt="відкрита веб-сторінка"
+                      class="img-list__img"
+                    />
+                  </picture>
                   <div class="img-link__hidden hidden-container">
                     <p class="hidden-container__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -147,23 +170,35 @@
             <li class="img-list__item">
               <a href="#" class="img-link">
                 <div class="img-link__thumb">
-                   <picture>
-                <source srcset="./img/portfolio/port-2-desk-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-2-desk-2x-min.jpeg 2x"
-                  media="(min-width: 1200px)"/>
-                <source srcset="./img/portfolio/port-2-tab-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-2-tab-2x-min.jpeg 2x"
-                  media="(min-width: 768px)"/>
-                <source srcset="./img/portfolio/port-2-mob-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-2-mob-2x-min.jpeg 2x"
-                  media="(max-width: 767px)"/>
-                <img
-                  src="./img/portfolio/port-2-desk-1x-min.jpeg"
-                   alt="постер баскетбольної ко
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/port-2-desk-1x-min.jpeg 1x,
+                        ./img/portfolio/port-2-desk-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-2-tab-1x-min.jpeg 1x,
+                        ./img/portfolio/port-2-tab-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-2-mob-1x-min.jpeg 1x,
+                        ./img/portfolio/port-2-mob-2x-min.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/portfolio/port-2-desk-1x-min.jpeg"
+                      alt="постер баскетбольної ко
                             манди"
-                  class="img-list__img"
-              />
-              </picture>
+                      class="img-list__img"
+                    />
+                  </picture>
                   <div class="img-link__hidden hidden-container">
                     <p class="hidden-container__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -185,21 +220,33 @@
               <a href="#" class="img-link">
                 <div class="img-link__thumb">
                   <picture>
-                <source srcset="./img/portfolio/port-3-desk-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-3-desk-2x-min.jpeg 2x"
-                  media="(min-width: 1200px)"/>
-                <source srcset="./img/portfolio/port-3-tab-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-3-tab-2x-min.jpeg 2x"
-                  media="(min-width: 768px)"/>
-                <source srcset="./img/portfolio/port-3-mob-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-3-mob-2x-min.jpeg 2x"
-                  media="(max-width: 767px)"/>
-                <img
-                  src="./img/portfolio/port-3-desk-1x-min.jpeg"
-                  alt="логотип ресторану"
-                  class="img-list__img"
-              />
-              </picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/port-3-desk-1x-min.jpeg 1x,
+                        ./img/portfolio/port-3-desk-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-3-tab-1x-min.jpeg 1x,
+                        ./img/portfolio/port-3-tab-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-3-mob-1x-min.jpeg 1x,
+                        ./img/portfolio/port-3-mob-2x-min.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/portfolio/port-3-desk-1x-min.jpeg"
+                      alt="логотип ресторану"
+                      class="img-list__img"
+                    />
+                  </picture>
                   <div class="img-link__hidden hidden-container">
                     <p class="hidden-container__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -220,22 +267,34 @@
             <li class="img-list__item">
               <a href="#" class="img-link">
                 <div class="img-link__thumb">
-                    <picture>
-                <source srcset="./img/portfolio/port-4-desk-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-4-desk-2x-min.jpeg 2x"
-                  media="(min-width: 1200px)"/>
-                <source srcset="./img/portfolio/port-4-tab-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-4-tab-2x-min.jpeg 2x"
-                  media="(min-width: 768px)"/>
-                <source srcset="./img/portfolio/port-4-mob-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-4-mob-2x-min.jpeg 2x"
-                  media="(max-width: 767px)"/>
-                <img
-                  src="./img/portfolio/port-4-desk-1x-min.jpeg"
-                  alt="навушники"
-                  class="img-list__img"
-              />
-              </picture>
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/port-4-desk-1x-min.jpeg 1x,
+                        ./img/portfolio/port-4-desk-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-4-tab-1x-min.jpeg 1x,
+                        ./img/portfolio/port-4-tab-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-4-mob-1x-min.jpeg 1x,
+                        ./img/portfolio/port-4-mob-2x-min.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/portfolio/port-4-desk-1x-min.jpeg"
+                      alt="навушники"
+                      class="img-list__img"
+                    />
+                  </picture>
                   <div class="img-link__hidden hidden-container">
                     <p class="hidden-container__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -256,22 +315,34 @@
             <li class="img-list__item">
               <a href="#" class="img-link">
                 <div class="img-link__thumb">
-                    <picture>
-                <source srcset="./img/portfolio/port-5-desk-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-5-desk-2x-min.jpeg 2x"
-                  media="(min-width: 1200px)"/>
-                <source srcset="./img/portfolio/port-5-tab-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-5-tab-2x-min.jpeg 2x"
-                  media="(min-width: 768px)"/>
-                <source srcset="./img/portfolio/port-5-mob-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-5-mob-2x-min.jpeg 2x"
-                  media="(max-width: 767px)"/>
-                <img
-                  src="./img/portfolio/port-5-desk-1x-min.jpeg"
-                  alt="коробки"
-                  class="img-list__img"
-              />
-              </picture>
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/port-5-desk-1x-min.jpeg 1x,
+                        ./img/portfolio/port-5-desk-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-5-tab-1x-min.jpeg 1x,
+                        ./img/portfolio/port-5-tab-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-5-mob-1x-min.jpeg 1x,
+                        ./img/portfolio/port-5-mob-2x-min.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/portfolio/port-5-desk-1x-min.jpeg"
+                      alt="коробки"
+                      class="img-list__img"
+                    />
+                  </picture>
                   <div class="img-link__hidden hidden-container">
                     <p class="hidden-container__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -292,22 +363,34 @@
             <li class="img-list__item">
               <a href="#" class="img-link">
                 <div class="img-link__thumb">
-                    <picture>
-                <source srcset="./img/portfolio/port-6-desk-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-6-desk-2x-min.jpeg 2x"
-                  media="(min-width: 1200px)"/>
-                <source srcset="./img/portfolio/port-6-tab-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-6-tab-2x-min.jpeg 2x"
-                  media="(min-width: 768px)"/>
-                <source srcset="./img/portfolio/port-6-mob-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-6-mob-2x-min.jpeg 2x"
-                  media="(max-width: 767px)"/>
-                <img
-                  src="./img/portfolio/port-6-desk-1x-min.jpeg"
-                  alt="веб-сторінка дизайнерів"
-                  class="img-list__img"
-              />
-              </picture>
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/port-6-desk-1x-min.jpeg 1x,
+                        ./img/portfolio/port-6-desk-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-6-tab-1x-min.jpeg 1x,
+                        ./img/portfolio/port-6-tab-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-6-mob-1x-min.jpeg 1x,
+                        ./img/portfolio/port-6-mob-2x-min.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/portfolio/port-6-desk-1x-min.jpeg"
+                      alt="веб-сторінка дизайнерів"
+                      class="img-list__img"
+                    />
+                  </picture>
                   <div class="img-link__hidden hidden-container">
                     <p class="hidden-container__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -329,21 +412,33 @@
               <a href="#" class="img-link">
                 <div class="img-link__thumb">
                   <picture>
-                <source srcset="./img/portfolio/port-7-desk-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-7-desk-2x-min.jpeg 2x"
-                  media="(min-width: 1200px)"/>
-                <source srcset="./img/portfolio/port-7-tab-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-7-tab-2x-min.jpeg 2x"
-                  media="(min-width: 768px)"/>
-                <source srcset="./img/portfolio/port-7-mob-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-7-mob-2x-min.jpeg 2x"
-                  media="(max-width: 767px)"/>
-                <img
-                  src="./img/portfolio/port-7-desk-1x-min.jpeg"
-                  alt="розгорнута книга"
-                  class="img-list__img"
-              />
-              </picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/port-7-desk-1x-min.jpeg 1x,
+                        ./img/portfolio/port-7-desk-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-7-tab-1x-min.jpeg 1x,
+                        ./img/portfolio/port-7-tab-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-7-mob-1x-min.jpeg 1x,
+                        ./img/portfolio/port-7-mob-2x-min.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/portfolio/port-7-desk-1x-min.jpeg"
+                      alt="розгорнута книга"
+                      class="img-list__img"
+                    />
+                  </picture>
                   <div class="img-link__hidden hidden-container">
                     <p class="hidden-container__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -365,21 +460,33 @@
               <a href="#" class="img-link">
                 <div class="img-link__thumb">
                   <picture>
-                <source srcset="./img/portfolio/port-8-desk-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-8-desk-2x-min.jpeg 2x"
-                  media="(min-width: 1200px)"/>
-                <source srcset="./img/portfolio/port-8-tab-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-8-tab-2x-min.jpeg 2x"
-                  media="(min-width: 768px)"/>
-                <source srcset="./img/portfolio/port-8-mob-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-8-mob-2x-min.jpeg 2x"
-                  media="(max-width: 767px)"/>
-                <img
-                  src="./img/portfolio/port-8-desk-1x-min.jpeg"
-                  alt="лейба"
-                  class="img-list__img"
-              />
-              </picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/port-8-desk-1x-min.jpeg 1x,
+                        ./img/portfolio/port-8-desk-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-8-tab-1x-min.jpeg 1x,
+                        ./img/portfolio/port-8-tab-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-8-mob-1x-min.jpeg 1x,
+                        ./img/portfolio/port-8-mob-2x-min.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/portfolio/port-8-desk-1x-min.jpeg"
+                      alt="лейба"
+                      class="img-list__img"
+                    />
+                  </picture>
                   <div class="img-link__hidden hidden-container">
                     <p class="hidden-container__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -401,21 +508,33 @@
               <a href="#" class="img-link">
                 <div class="img-link__thumb">
                   <picture>
-                <source srcset="./img/portfolio/port-9-desk-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-9-desk-2x-min.jpeg 2x"
-                  media="(min-width: 1200px)"/>
-                <source srcset="./img/portfolio/port-9-tab-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-9-tab-2x-min.jpeg 2x"
-                  media="(min-width: 768px)"/>
-                <source srcset="./img/portfolio/port-9-mob-1x-min.jpeg 1x, 
-                        ./img/portfolio/port-9-mob-2x-min.jpeg 2x"
-                  media="(max-width: 767px)"/>
-                <img
-                  src="./img/portfolio/port-9-desk-1x-min.jpeg"
-                   alt="друкування на клавіатурі ноутбука"
-                  class="img-list__img"
-              />
-              </picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/port-9-desk-1x-min.jpeg 1x,
+                        ./img/portfolio/port-9-desk-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-9-tab-1x-min.jpeg 1x,
+                        ./img/portfolio/port-9-tab-2x-min.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/port-9-mob-1x-min.jpeg 1x,
+                        ./img/portfolio/port-9-mob-2x-min.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/portfolio/port-9-desk-1x-min.jpeg"
+                      alt="друкування на клавіатурі ноутбука"
+                      class="img-list__img"
+                    />
+                  </picture>
                   <div class="img-link__hidden hidden-container">
                     <p class="hidden-container__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -440,69 +559,69 @@
 
     <footer class="footer">
       <div class="container container--flex">
-         <div class="footer-thumb">
-        <div>
-          <a href="#" lang="en" class="logo logo--white"
-            ><span class="logo__text">Web</span>Studio</a
-          >
-         
-          <address class="address">
-            <ul class="address__list">
-              <li class="address__item">
-                <a
-                  href="https://goo.gl/maps/bjUP8EC5XPc2eE5U6"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow "
-                  class="address__link address__link--white"
-                  >м. Київ, пр-т Лесі Українки, 26
+        <div class="footer-thumb">
+          <div>
+            <a href="#" lang="en" class="logo logo--white"
+              ><span class="logo__text">Web</span>Studio</a
+            >
+
+            <address class="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <a
+                    href="https://goo.gl/maps/bjUP8EC5XPc2eE5U6"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow "
+                    class="address__link address__link--white"
+                    >м. Київ, пр-т Лесі Українки, 26
+                  </a>
+                </li>
+                <li class="address__item">
+                  <a href="mailto:info@devstudio.com" class="address__link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a href="tel:+380961111111" class="address__link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-social">
+            <p class="footer-social__label">приєднуйтесь</p>
+            <ul class="footer-soc-list">
+              <li class="footer-soc-list__item">
+                <a class="footer-soc-list__link link" href="#">
+                  <svg class="footer-soc-list__icon" width="20" height="20">
+                    <use href="./img/icons.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="address__item">
-                <a href="mailto:info@devstudio.com" class="address__link"
-                  >info@devstudio.com</a
-                >
+              <li class="footer-soc-list__item">
+                <a class="footer-soc-list__link link" href="#">
+                  <svg class="footer-soc-list__icon" width="20" height="20">
+                    <use href="./img/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a href="tel:+380961111111" class="address__link"
-                  >+38 096 111 11 11</a
-                >
+              <li class="footer-soc-list__item">
+                <a class="footer-soc-list__link link" href="#">
+                  <svg class="footer-soc-list__icon" width="20" height="20">
+                    <use href="./img/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-soc-list__item">
+                <a class="footer-soc-list__link link" href="#">
+                  <svg class="footer-soc-list__icon" width="20" height="20">
+                    <use href="./img/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-social">
-          <p class="footer-social__label">приєднуйтесь</p>
-          <ul class="footer-soc-list">
-            <li class="footer-soc-list__item">
-              <a class="footer-soc-list__link link" href="#">
-                <svg class="footer-soc-list__icon" width="20" height="20">
-                  <use href="./img/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-list__item">
-              <a class="footer-soc-list__link link" href="#">
-                <svg class="footer-soc-list__icon" width="20" height="20">
-                  <use href="./img/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-list__item">
-              <a class="footer-soc-list__link link" href="#">
-                <svg class="footer-soc-list__icon" width="20" height="20">
-                  <use href="./img/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-list__item">
-              <a class="footer-soc-list__link link" href="#">
-                <svg class="footer-soc-list__icon" width="20" height="20">
-                  <use href="./img/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+          </div>
         </div>
         <form class="footer-form">
           <p class="footer-form__label">підпишіться на розсилку</p>
