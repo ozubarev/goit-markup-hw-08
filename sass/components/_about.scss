@@ -16,8 +16,8 @@
 }
 
 .about-list {
-  @extend .features-list;
-
+  @extend list;
+  display: flex;
   &__item {
     position: relative;
 

@@ -482,10 +482,14 @@ body.modal-open {
   line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .hero__title {
+    max-width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -932,7 +936,7 @@ body.modal-open {
 
 @media screen and (min-width: 1200px) {
   .footer-form {
-    margin-left: 93px;
+    margin-left: auto;
   }
 }
 .footer-form__input {
