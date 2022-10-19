@@ -5,6 +5,10 @@ body {
   font-weight: $main-font-weight;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
